@@ -24,6 +24,8 @@ namespace Roslynator.CSharp.Analysis
 
         public override void Initialize(AnalysisContext context)
         {
+            Rce.Run();
+
             base.Initialize(context);
 
             context.RegisterSyntaxTreeAction(f => AnalyzeTrailingTrivia(f));
